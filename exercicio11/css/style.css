@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ropa Sans', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+
+    transition: background 0.5s linear, color 0.5s linear;
+}
+
+
+/* darkmode */
+body.dark{
+    background-color: #15202b;
+    color: #fff;
+}
+.darkmode-btn label{
+    background-color: #15202b;
+    color: #fff;
+    border-radius: 8%;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.5s linear;
+}
+body.dark .darkmode-btn label{
+    background-color: #fff;
+    color: #15202b;
+}
+.darkmode-btn input{
+    visibility: hidden;
+}
+/* /darkmode */
+
+header{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+}
+header h1{
+    color: #777777;
+    display: inline-block;
+    font-size: 45px;
+}
+header h2{
+    color: #AAAAAA;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+}
+header button.btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    color: #AAAAAA;
+}
+header .container{ /*usando header .container pois iremos usar essa classe em outras partes do nosso site*/
+    display: flex;
+    justify-content: space-between;
+}
+header .buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+section .banner{
+    margin: 50px 0;
+    
+}
+section.banner img.slider{
+    width: 100%; 
+}
+section.banner .carousel{
+    position: relative;
+}
+ 
+section.banner .carousel .controls{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* ao botar height 100% e o top 0, o css calcula automaticamente a metade, como? nao sei. */
+    align-items: center;
+}
+section.banner .carousel .controls button{
+    background-color: rgba(141, 141, 141, 0.62);
+    border-radius: 100%;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    margin: 0 30px;
+}
+section.banner .carousel .controls button img{
+    height: 30px;
+}
+/* feats */
+section.feats article{
+    background-color: #EEEEEE;
+    width: 450px;
+    margin: 50px;
+    color: #555555;
+}
+section.feats article .thumb{
+    width: 100%;
+    height: 250px;
+    background-image: url('/exercicio4/img/Rectangle6.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+    /*garante que o img vai ficar centralizada mesmo cortada*/
+}
+section.feats article .info{
+    padding: 15px;
+}
+section.feats article .info .tag{
+    font-size: 1.9rem;
+    padding: 5px 15px;
+    border-radius: 40px;
+    color: #FFFFFF;
+}
+section.feats article .info .tag.tag-new{
+    background-color: #51D275;
+}
+section.feats article .info .tag.tag-sale{
+    background-color: #DC9730;
+}
+section.feats article .info .details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 15px;
+}
+section.feats article .info .details .price{
+    margin: 0;
+    font-size: 2rem;
+}
+section.feats .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container{
+    width: 1200px;/*numero qualquer desejado*/
+    max-width: 100%; /*importante para responsividade*/
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+/*Your Style*/
+section.styles{
+    margin: 15px;
+}
+section.styles h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color:  #888888;
+}
+
+section.styles article{
+    /* text-align: center; retirado pois depois de aplicarmos o flex, foi preciso fazer o ajuste por lá */
+    padding: 60px 30px;
+    margin: 20px auto;
+    color:#FFFFFF;
+    
+    background-color: gray;
+    /* esse fundo so funcionara se a imagem nao for carregada */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+section.styles article h3{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+
+    background: rgba(196, 196, 196, 0.5);;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    /* tiramos a margem que vem como default para o elemento h3 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Form */
+section.contact{
+    margin-top: 60px 0;
+}
+section.contact h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+section.contact form{
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+section.contact form input,
+section.contact form textarea{
+    width: 100%;
+    padding: 7px;
+    resize: none;
+    margin: 10px 0;
+}
+section.contact form textarea{
+    padding: 40px;
+}
+section.contact form button{
+    padding: 10px 20px;
+    background-color: #DC9730;
+    color:#FFFFFF;
+    border: none;
+}
+
+/* Footer */
+footer{
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 70px 0;
+}
+footer .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .mapa iframe{
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    border: 0;
+    border-radius: 10%;
+    border-radius: 10px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.25);
+    /* o mapa ja veio com tamanho no html (width="400" height="300" style="border:0;") mas o ideal é ter essas propriedades no css */
+}
+footer .info a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+footer .info h4,
+footer .info p{
+    font-size: 1.2rem;
+}
+footer .info .social-media a{
+    margin-right: 15px;
+    
+}
+footer .info .social-media img{
+    height: 35px;
+}
+@media (max-width:1127px) {
+    section.feats article {
+        width: 350px;
+        margin: 50px;
+    }
+}
+@media (max-width: 928px) {
+    section.feats article {
+        width: 100%;
+    }
+}

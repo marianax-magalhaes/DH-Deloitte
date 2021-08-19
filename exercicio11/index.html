@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>LOVT</h1>
+                <h2>Your Love<br>your loft!</h2>
+            </div>
+
+            <div class=buttons>
+                <button class="btn">☰</button>
+
+                <div class="darkmode-btn">
+                    <input type="checkbox" name="darkmode" id="darkmode">
+                    <label for="darkmode">modo escuro</label>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="banner">
+        <div class="container">
+            <div class="carousel">
+                <img class="slider" src="img/Rectangle3.svg" alt="loft duplex classico">
+
+                    <div class="controls">
+                            <button class="left">
+                                <img src="img/arrow-left.svg" alt="previous">
+                            </button>
+
+                            <button class="right">
+                                <img src="img/arrow-right.svg" alt="next">
+                            </button>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="feats">
+        <div class="container">
+            <article>
+                <div class="thumb" style="background-image: url('img/Rectangle6.svg')"></div>
+                <!-- Nesse caso estamos usando o style inline pois faz mais sentido nesse cassp, apenas a imagem muda, todas as outras confirgurações permanecem -->
+                <div class="info">
+
+                    <div class="details">
+                        <h3 class="price">$1,200</h3>
+                        <small class="tag tag-new">New</small>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio qui mollitia atque molestiae
+                        voluptate itaque ducimus eveniet repudiandae beatae quae?</p>
+                </div>
+            </article>
+            <article>
+                <div class="thumb" style="background-image:url('img/Rectangle7.svg')"></div>
+                <div class="info">
+
+                    <div class="details">
+                        <h3 class="price">$2,000</h3>
+                        <small class="tag tag-sale">Sale</small>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio qui mollitia atque molestiae
+                        voluptate itaque ducimus eveniet repudiandae beatae quae?</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="styles">
+        <div class="container">
+            <h2>Your Style</h2>
+
+            <article style="background-image: url('img/Rectangle11.svg')">
+                <h3>Industrial</h3>
+            </article>
+
+            <article style="background-image: url('img/Rectangle12.svg');">
+                <h3>Modern</h3>
+            </article>
+
+            <article style="background-image: url('img/Rectangle13.svg')">
+                <h3>Classic</h3>
+            </article>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+
+            <form action="">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email">
+
+                <label for="msg">Mensagem:</label>
+                <textarea name="msg" id="msg"></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>    
+
+    <footer>
+        <div class="container">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.221899386596!2d-74.17463798459434!3d40.735142579329384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2537ef2f65843%3A0x386539ca4e19619b!2sBroad%20St%2C%20Newark%2C%20NJ%2007102%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1628774054240!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy"></iframe>
+                <!-- Todo esse link foi copiado diretamente do site do google maps em compartilhar>incorporar um mapa -->
+            </div>
+
+            <div class="info">
+            <h4>LOVT - You love, your loft!</h4>
+
+            <p>Broad St, Newark, NJ 07102 - USA</p>
+
+            <p><a href="tel:+1 (973) 854-555-548" target="_blank">+1 (973) 854-555-548</a></p>
+
+            <p><a href="mailto:contact@lovtrealstate.com">contact@lovtrealstate.com</a></p>
+
+            <div class="social-media">
+                <p>OUR SOCIAL MEDIAS:</p>
+                <a href="https://www.instagram.com/"><img src="img/instgram.svg" target="_blank" alt="logo-instagram"></a>
+                <a href="img/facebook.svg" alt="logo-facebook"></a>
+                <a href="https://api.whatsapp.com/send?phone=551973854555548&text=Ol%C3%A1!"><img src="img/whatsapp.svg" alt="logo-whatsapp"></a>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
