@@ -137,15 +137,16 @@ a{
 
 
 
-.likes .heart {
-  transition: 0.2s;
+.likes #heart {
+  transition: 0.4s;
+  cursor: pointer;
 }
-.heart:hover {
+#heart:hover {
   color: #f50057;
 }
 .fas{
   color: #f50057;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 
