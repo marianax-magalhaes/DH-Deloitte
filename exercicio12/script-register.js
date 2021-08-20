@@ -49,18 +49,31 @@ window.addEventListener('load', (eventLoad) => {
         }else if(inputNome.value.length == 1){
             erros.push('O campo Sobrenome deve conter no mínimo 2 caracteres.');
         }
-
+        
         if(inputBirth.value == ''){
             erros.push('O campo Data de Nascimento está vazio');
         }
-        
-        
-    
-        
-        
-
-        
-
+        function idade(dataDeNascimento, minimo, maximo){
+            console.log(dataDeNascimento.value);
+                var hoje = new Date(); //instancia do JS
+                var todayMonth = hoje.getMonth(); //metodo que retorna mes da data JS
+                var niver = dataDeNascimento.value.split("-");
+                var age = hoje.getFullYear() - niver[0];
+                if (todayMonth < niver[1]-1){ //-1 pq a contagem da data JS começa do 0 e vai ate 11
+                    age--;
+                }
+                if ((hoje.Month == niver[1]-1) && hoje.getDate()<niver[2]){
+                    age--;
+                }
+                console.log(age);
+                if(age<16){
+                    erros.push("Rala peito, menor!")
+                    
+                }else if (age>120){
+                    erros.push("Vai descansar, vovô!")
+                }
+            }
+            idade(inputBirth, 16, 120);
 
         if(inputUsuario.value == ''){
             erros.push('O campo Nome do Usuário está vazio.');
@@ -79,37 +92,13 @@ window.addEventListener('load', (eventLoad) => {
         }
 
 
-        // for (const erro of erros) {
-        //     listaErros.innerHTML += '<li>' + erro + '</li>';
-        // }
+        for (const erro of erros) {
+            listaErros.innerHTML += '<li>' + erro + '</li>';
+        }
 
         listaErros.style.cssText="list-style-type:none; text-align:left; color:red";
     
         
-        /*****ex 3*****/
-
-        function idade(dataDeNascimento, minimo, maximo){
-            console.log(dataDeNascimento.value);
-                var hoje = new Date(); //instancia do JS
-                var todayMonth = hoje.getMonth(); //metodo que retorna mes da data JS
-                var niver = dataDeNascimento.value.split("-");
-                var age = hoje.getFullYear() - niver[0];
-                if (todayMonth < niver[1]-1){ //-1 pq a contagem da data JS começa do 0 e vai ate 11
-                    age--;
-                }
-                if ((hoje.Month == niver[1]-1) && hoje.getDate()<niver[2]){
-                    age--;
-                }
-                console.log(age);
-                if(age<16){
-                    erros.push("menor")
-                }
-            }
-            idade(inputBirth, 16, 120);
-            
-            for (const erro of erros) {
-                listaErros.innerHTML += '<li>' + erro + '</li>';
-            }
         }); 
         
         /*****ex 2*****/
